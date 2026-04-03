@@ -12,19 +12,23 @@
 </style>
 </head>
 <body>
-<h1>🐾 PawLog App Icon</h1>
-<p>Right-click the image below and "Save Image As" — or use the download button.</p>
+<h1>🐾 PawLog App Icon (No Alpha)</h1>
+<p>Right-click the image and "Save Image As" — or use the download button.</p>
 <br>
 <canvas id="icon" width="1024" height="1024"></canvas>
 <br>
-<a id="dl" href="#">⬇️ Download Icon (1024x1024 PNG)</a>
+<a id="dl" href="#">⬇️ Download Icon (1024x1024 JPEG - No Alpha)</a>
 
 <script>
 const canvas = document.getElementById('icon');
 const ctx = canvas.getContext('2d');
 const s = 1024;
 
-// Orange gradient background (full square, App Store masks it)
+// Fill entire background solid first (no transparency)
+ctx.fillStyle = '#FF6B35';
+ctx.fillRect(0, 0, s, s);
+
+// Orange gradient background
 const grad = ctx.createLinearGradient(0, 0, s, s);
 grad.addColorStop(0, '#FF8C42');
 grad.addColorStop(1, '#FF6B35');
@@ -72,9 +76,17 @@ ctx.beginPath();
 ctx.ellipse(679, 415, 68, 80, 0.3, 0, Math.PI * 2);
 ctx.fill();
 
-// Set up download link
+// Convert to JPEG (no alpha channel) then to PNG without alpha
+// Create a second canvas to flatten alpha
+const flat = document.createElement('canvas');
+flat.width = s;
+flat.height = s;
+const fctx = flat.getContext('2d', { alpha: false });
+fctx.drawImage(canvas, 0, 0);
+
+// Set up download link as PNG from non-alpha canvas
 const dl = document.getElementById('dl');
-dl.href = canvas.toDataURL('image/png');
+dl.href = flat.toDataURL('image/png');
 dl.download = 'pawlog-icon-1024.png';
 </script>
 </body>
