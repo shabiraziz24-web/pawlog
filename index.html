@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawLog — Pet Health Tracker</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+        .hero { background: linear-gradient(135deg, #FF8C42, #FF6B35); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.8em; margin-bottom: 10px; }
+        .hero .subtitle { font-size: 1.3em; opacity: 0.9; margin-bottom: 30px; }
+        .hero .tagline { font-size: 1.1em; opacity: 0.8; max-width: 500px; margin: 0 auto 30px; }
+        .badge { display: inline-block; }
+        .badge img { height: 50px; }
+        .features { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .features h2 { text-align: center; font-size: 2em; margin-bottom: 40px; color: #FF6B35; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .feature { padding: 25px; border-radius: 12px; background: #FFF8F4; }
+        .feature .icon { font-size: 2em; margin-bottom: 10px; }
+        .feature h3 { font-size: 1.2em; margin-bottom: 8px; }
+        .feature p { color: #555; line-height: 1.5; }
+        .cta { text-align: center; padding: 60px 20px; background: #FFF8F4; }
+        .cta h2 { font-size: 1.8em; margin-bottom: 15px; }
+        .cta p { color: #555; margin-bottom: 25px; }
+        footer { text-align: center; padding: 30px 20px; color: #888; font-size: 0.9em; }
+        footer a { color: #FF6B35; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2em; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🐾 PawLog</h1>
+        <p class="subtitle">Pet Health Tracker</p>
+        <p class="tagline">Track your pet's health, vet visits, vaccinations, and reminders — all in one place.</p>
+        <!-- Replace # with your App Store link once live -->
+        <a href="#" class="badge"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+    </div>
+
+    <div class="features">
+        <h2>Everything Your Pet Needs</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="icon">📊</div>
+                <h3>Health Tracking</h3>
+                <p>Monitor weight, vaccinations, and vet visits over time. See trends and stay on top of your pet's wellness.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">⏰</div>
+                <h3>Smart Reminders</h3>
+                <p>Never miss a medication dose or vet appointment. Get timely reminders for everything that matters.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🆘</div>
+                <h3>Emergency Card</h3>
+                <p>Your pet's vital info, always accessible. Share it instantly with vets or pet sitters in an emergency.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📸</div>
+                <h3>Photo Gallery</h3>
+                <p>Keep a beautiful collection of your pet's photos alongside their health records.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Keep Your Pet Healthy</h2>
+        <p>Download PawLog and start tracking today. Free to use, with premium features available.</p>
+        <a href="#" class="badge"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+    </div>
+
+    <footer>
+        <p>© 2026 Shabir Aziz. All rights reserved.</p>
+        <p><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
