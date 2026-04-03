@@ -84,10 +84,10 @@ flat.height = s;
 const fctx = flat.getContext('2d', { alpha: false });
 fctx.drawImage(canvas, 0, 0);
 
-// Set up download link as PNG from non-alpha canvas
+// Set up download link as JPEG (guaranteed no alpha)
 const dl = document.getElementById('dl');
-dl.href = flat.toDataURL('image/png');
-dl.download = 'pawlog-icon-1024.png';
+dl.href = flat.toDataURL('image/jpeg', 1.0);
+dl.download = 'pawlog-icon-1024.jpg';
 </script>
 </body>
 </html>
